@@ -1,9 +1,14 @@
 import { signIn } from "next-auth/react";
 import Image from "next/image";
+import Head from "next/head";
 
 function Login({ providers }) {
   return (
     <div className="flex flex-col items-center space-y-20 pt-48">
+      <Head>
+        <title>Twitter Login</title>
+        <link rel="icon" href="/twitter-favicon.png" />
+      </Head>
       <Image
         src="https://rb.gy/ogau5a"
         width={150}
