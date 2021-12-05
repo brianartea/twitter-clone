@@ -28,6 +28,7 @@ function Input() {
   const [selectedFile, setSelectedFile] = useState(null);
   const filePickerRef = useRef(null);
   const [showEmojis, setShowEmojis] = useState(false);
+  const [imageUrl, setImageUrl] = useState("");
 
   const sendPost = async () => {
     if (loading) return;
@@ -40,6 +41,7 @@ function Input() {
       tag: session.user.tag,
       text: input,
       timestamp: serverTimestamp(),
+      image: imageUrl,
     });
 
     const imageRef = ref(storage, `posts/${docRef.id}/image`);
@@ -55,6 +57,7 @@ function Input() {
 
     setLoading(false);
     setInput("");
+    setImageUrl("");
     setSelectedFile(null);
     setShowEmojis(false);
   };
@@ -99,7 +102,13 @@ function Input() {
             rows="2"
             className="bg-transparent outline-none text-[#d9d9d9] text-lg placeholder-gray-500 tracking-wide w-full min-h-[50px]"
           />
-
+          <input
+            value={imageUrl}
+            onChange={(e) => setImageUrl(e.target.value)}
+            placeholder="Image/Gif URL (Optional)"
+            rows="2"
+            className="bg-transparent outline-none text-[#d9d9d9] text-lg placeholder-gray-500 tracking-wide w-full min-h-[50px]"
+          />
           {selectedFile && (
             <div className="relative">
               <div
@@ -129,6 +138,7 @@ function Input() {
                   ref={filePickerRef}
                   hidden
                   onChange={addImageToPost}
+                  title="Add Image"
                 />
               </div>
 
