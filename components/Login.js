@@ -11,6 +11,7 @@ function Login({ providers }) {
       </Head>
       <Image
         src="https://rb.gy/ogau5a"
+        alt="Twitter Logo"
         width={150}
         height={150}
         objectFit="contain"

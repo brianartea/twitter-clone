@@ -89,7 +89,7 @@ function Input() {
     >
       <img
         src={session.user.image}
-        alt=""
+        alt="user image"
         className="h-11 w-11 rounded-full cursor-pointer"
         onClick={signOut}
       />
@@ -119,7 +119,7 @@ function Input() {
               </div>
               <img
                 src={selectedFile}
-                alt=""
+                alt="selected file"
                 className="rounded-2xl max-h-80 object-contain"
               />
             </div>

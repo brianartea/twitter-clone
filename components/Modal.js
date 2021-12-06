@@ -94,7 +94,7 @@ function Modal() {
                     <span className="w-0.5 h-full z-[-1] absolute left-5 top-11 bg-gray-600" />
                     <img
                       src={post?.userImg}
-                      alt=""
+                      alt={post?.username}
                       className="h-11 w-11 rounded-full"
                     />
                     <div>
@@ -119,7 +119,7 @@ function Modal() {
                   <div className="mt-7 flex space-x-3 w-full">
                     <img
                       src={session.user.image}
-                      alt=""
+                      alt={session.user.name}
                       className="h-11 w-11 rounded-full"
                     />
                     <div className="flex-grow mt-2">

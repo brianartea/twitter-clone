@@ -41,7 +41,7 @@ function Sidebar() {
       >
         <img
           src={session.user.image}
-          alt=""
+          alt={session.user.name}
           className="h-10 w-10 rounded-full xl:mr-2.5"
         />
         <div className="hidden xl:inline leading-5">
