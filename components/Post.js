@@ -83,7 +83,7 @@ function Post({ id, post, postPage }) {
       {!postPage && (
         <img
           src={post?.userImg}
-          alt=""
+          alt={post?.username}
           className="h-11 w-11 rounded-full mr-4"
         />
       )}
@@ -92,7 +92,7 @@ function Post({ id, post, postPage }) {
           {postPage && (
             <img
               src={post?.userImg}
-              alt="Profile Pic"
+              alt={post?.username}
               className="h-11 w-11 rounded-full mr-4"
             />
           )}
