@@ -10,10 +10,10 @@ function Login({ providers }) {
         <link rel="icon" href="/twitter-favicon.png" />
       </Head>
       <Image
-        src="https://rb.gy/ogau5a"
+        src="/twitter-icon-svg-28.jpg"
         alt="Twitter Logo"
-        width={150}
-        height={150}
+        width={200}
+        height={200}
         objectFit="contain"
       />
 
